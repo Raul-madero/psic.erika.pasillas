@@ -1,10 +1,40 @@
 .news {
-    width: 90%;
-    height: 100vh;
-    margin: 0 auto;
+    width: 100%;
+    height: fit-content;
+    margin: 24px auto;
+    padding-bottom: 24px;
     &--image {
-        width: 90%;
+        display: block;
+        align-self: center;
+        width: 50%;
         height: 350px;
-        margin: 0 auto;
+        margin: 24px auto;
+    }
+    &--title {
+        margin: 24px 0;
+        font-family: $Fuente2;
+        color: $brand-color;
+        font-weight: 700;
+        padding-bottom: 24px;
+        border-bottom: 1px solid $primary-color;
+        @include font-size(36px);
+    }
+}
+
+.news--article {
+    width: 90%;
+    height: fit-content;
+    &__subtitle {
+        margin-bottom: 24px;
+        color: $soft-black;
+        @include font-size(24px);
+    }
+    &__info {
+        display: block;
+        width: 80%;
+        margin: 18px auto;
+        color: $soft-black;
+        font-weight: 500;
+        @include font-size(18px);
     }
 }

@@ -23,6 +23,8 @@ h3 {
 }
 
 body {
+  max-width: 1200px;
+  margin: 0 auto;
   top: 0;
   bottom: 0;
   right: 0;
@@ -139,10 +141,6 @@ a {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.blogs-main {
-  border-bottom: 24px solid rgba(143, 163, 64, 0.64);
 }
 
 .main-article {
@@ -274,14 +272,52 @@ a {
 }
 
 .news {
-  width: 90%;
-  height: 100vh;
-  margin: 0 auto;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 24px auto;
+  padding-bottom: 24px;
 }
 .news--image {
-  width: 90%;
+  display: block;
+  align-self: center;
+  width: 50%;
   height: 350px;
-  margin: 0 auto;
+  margin: 24px auto;
+}
+.news--title {
+  margin: 24px 0;
+  font-family: "Dancing Script";
+  color: rgba(189, 186, 32, 0.64);
+  font-weight: 700;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(143, 163, 64, 0.64);
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 3.375rem;
+}
+
+.news--article {
+  width: 90%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.news--article__subtitle {
+  margin-bottom: 24px;
+  color: rgba(26, 26, 2, 0.64);
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}
+.news--article__info {
+  display: block;
+  width: 80%;
+  margin: 18px auto;
+  color: rgba(26, 26, 2, 0.64);
+  font-weight: 500;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
 }
 
 .footer-info {
@@ -292,6 +328,7 @@ a {
   height: 96px;
   padding-top: 16px;
   background-color: rgba(26, 26, 2, 0.64);
+  border-top: 24px solid rgba(143, 163, 64, 0.64);
 }
 .footer-info .footer-name {
   color: rgb(247, 248, 242);
