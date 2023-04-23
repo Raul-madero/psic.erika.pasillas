@@ -273,6 +273,17 @@ a {
   text-align: center;
 }
 
+.news {
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+}
+.news--image {
+  width: 90%;
+  height: 350px;
+  margin: 0 auto;
+}
+
 .footer-info {
   display: flex;
   flex-direction: column;
