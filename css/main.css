@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@400;600;700&display=swap");
+h1 {
+  font-size: 30px;
+  font-family: "Montserrat", serif;
+  margin: 0;
+}
+
+h2 {
+  font-size: 25px;
+  font-family: "Montserrat", serif;
+  margin: 0;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: "Montserrat", serif;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-family: "Montserrat", serif;
+}
+
+a {
+  text-decoration: none;
+  display: inline;
+  color: black;
+}
+
+.main-header {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+.main-header .social-media {
+  height: 100%;
+  display: grid;
+  background-image: linear-gradient(8deg, rgb(247, 248, 242), rgba(143, 163, 64, 0.64));
+}
+.main-header .social-media__icons {
+  width: 300px;
+  height: auto;
+  display: flex;
+  justify-items: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  justify-self: end;
+  margin-right: 50px;
+}
+.main-header .social-media__icons span {
+  color: rgb(247, 248, 242);
+}
+
+.header-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 150px;
+  background-color: rgb(247, 248, 242);
+}
+.header-nav__logo {
+  margin-left: 50px;
+}
+.header-nav__logo img {
+  width: 220px;
+  height: 150px;
+}
+.header-nav__logo img:hover {
+  scale: 1.1;
+  box-shadow: 0 4px 4px 2px rgb(74, 87, 25);
+}
+.header-nav__about {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+.header-nav__about a {
+  font-family: "Dancing Script";
+  border-bottom: 1px solid black;
+  font-size: 25px;
+  font-size: 1.5625rem;
+  line-height: 2.34375rem;
+}
+.header-nav__about a:hover {
+  scale: 1.1;
+  box-shadow: 0 4px 4px 2px rgb(74, 87, 25);
+}
+
+.hero-body {
+  position: fixed;
+}
+
+.home-main {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/img/marDesktop.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.home-main__title {
+  width: 50%;
+  padding-top: 15px;
+  text-align: center;
+  margin-bottom: 150px;
+  font-weight: 700;
+  color: rgb(247, 248, 242);
+}
+.home-main__button {
+  width: 250px;
+  height: 50px;
+  background-color: #bdba20;
+  border: none;
+  border-radius: 25px;
+}
+.home-main__button:hover {
+  scale: 1.1;
+  box-shadow: 0 4px 4px 2px rgb(74, 87, 25);
+}
+.home-main__button a {
+  font-weight: 600;
+  color: rgba(26, 26, 2, 0.64);
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.blogs-main {
+  border-bottom: 24px solid rgba(143, 163, 64, 0.64);
+}
+
+.main-article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+  width: 100%;
+  padding: 40px 0;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: rgba(189, 186, 32, 0.64);
+}
+.main-article--image {
+  display: flex;
+  flex-direction: column;
+  place-self: end;
+  width: 90%;
+  height: 100%;
+  border-right: 0.5px solid rgba(26, 26, 2, 0.64);
+}
+.main-article--image__title {
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: rgba(26, 26, 2, 0.64);
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+.main-article--image__image {
+  width: 75%;
+  height: 70%;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  margin-top: 24px;
+}
+.main-article--info {
+  place-self: center;
+  width: 70%;
+}
+.main-article--info__title {
+  color: rgba(80, 116, 163, 0.64);
+  margin: 16px 0 16px 12px;
+}
+.main-article--info__read {
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.main-article--info__button {
+  display: block;
+  padding-top: 16px;
+  width: 160px;
+  height: 40px;
+  border: 1px solid rgb(74, 87, 25);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+}
+.main-article--info__button:hover {
+  scale: 1.1;
+  box-shadow: 0 4px 4px 2px rgb(74, 87, 25);
+}
+
+.blogs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 75%;
+  margin: 10px auto;
+}
+.blogs-container--title {
+  display: block;
+  place-self: center;
+  margin: 16px 0;
+}
+.blogs-container .cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  border-top: 1px solid rgba(26, 26, 2, 0.64);
+}
+.blogs-container .cards-container .blog-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 16px;
+  padding: 15px;
+}
+.blogs-container .cards-container .blog-card:hover {
+  scale: 1.1;
+  box-shadow: 0 4px 4px 2px rgb(74, 87, 25);
+}
+.blogs-container .cards-container .blog-card__image {
+  width: 90%;
+  height: 50%;
+  margin: 10px auto;
+  border-radius: 8px;
+}
+.blogs-container .cards-container .blog-card__title {
+  color: rgb(74, 87, 25);
+  margin-bottom: 16px;
+  font-weight: 400;
+  padding: 15px;
+  font-family: "Montserrat", serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+.blogs-container .cards-container .blog-card__info {
+  color: rgb(74, 87, 25);
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.blogs-container .cards-container .blog-card__button {
+  display: block;
+  padding-top: 16px;
+  width: 160px;
+  height: 40px;
+  border: 1px solid rgb(74, 87, 25);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 96px;
+  padding-top: 16px;
+  background-color: rgba(26, 26, 2, 0.64);
+}
+.footer-info .footer-name {
+  color: rgb(247, 248, 242);
+  font-family: "Dancing Script";
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 3.375rem;
+}
+.footer-info .footer-lic {
+  color: rgb(247, 248, 242);
+  font-family: "Dancing Script";
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}

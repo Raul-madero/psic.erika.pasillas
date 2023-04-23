@@ -1,0 +1,19 @@
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 96px;
+    padding-top: 16px;
+    background-color: $soft-black;
+    .footer-name {
+        color: $offwhite;
+        font-family: $Fuente2;
+        @include font-size(36px);
+    }
+    .footer-lic {
+        color: $offwhite;
+        font-family: $Fuente2;
+        @include font-size(24px);
+    }
+}

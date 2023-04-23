@@ -1,0 +1,50 @@
+.main-header {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    .social-media {
+        height: 100%;
+        display: grid;
+        background-image: linear-gradient(8deg, $offwhite, $primary-color);
+        &__icons {
+            width: 300px;
+            height: auto;
+            display: flex;
+            justify-items: flex-end;
+            align-items: center;
+            justify-content: space-between;
+            justify-self: end;
+            margin-right: 50px;
+            span {
+                color: $offwhite;
+            }
+        }
+    }
+}
+    .header-nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 150px;
+        background-color: $offwhite;
+        &__logo {
+            margin-left: 50px;
+            img {
+                width: 220px;
+                height: 150px;
+                @include action;
+            }
+        }
+        &__about {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-right: 50px;
+            a {
+                font-family: $Fuente2;
+                border-bottom: 1px solid black;
+                @include action;
+                @include font-size(25px);
+            }
+        }
+    }

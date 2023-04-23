@@ -1,0 +1,102 @@
+.blogs-main {
+    border-bottom: 24px solid $primary-color;
+}
+
+.main-article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    width: 100%;
+    padding: 40px 0;
+    height: fit-content;
+    background-color: $brand-color;
+    &--image {
+        display: flex;
+        flex-direction: column;
+        place-self: end;
+        width: 90%;
+        height: 100%;
+        border-right: .5px solid $soft-black;
+        &__title {
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: $soft-black;
+            @include font-size(20px)
+        }
+        &__image {
+            width: 75%;
+            height: 70%;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            margin-top: 24px;
+        }
+    }
+    &--info {
+        place-self: center;
+        width: 70%;
+        &__title {
+            color: $secondary-color;
+            margin: 16px 0 16px 12px;
+        }
+        &__read {
+            margin-bottom: 16px;
+            font-weight: 400;
+            @include font-size(16px);
+        }
+        &__button {
+            @include leer;
+            @include action;
+            @include font-size(18px);
+        }
+    }
+}
+
+.blogs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 75%;
+    margin: 10px auto;
+    &--title {
+        display: block;
+        place-self: center;
+        margin: 16px 0;
+    }
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 48px;
+        border-top: 1px solid $soft-black;
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 16px;
+            padding: 15px;
+            @include action;
+            &__image {
+                width: 90%;
+                height: 50%;
+                margin: 10px auto;
+                border-radius: 8px;
+            }
+            &__title {
+                color: $dark-color;
+                margin-bottom: 16px;
+                font-weight: 400;
+                padding: 15px;
+                @include titulos($Fuente1);
+                @include font-size(20px);
+            }
+            &__info {
+                color: $dark-color;
+                margin-bottom: 16px;
+                @include font-size(16px);
+            }
+            &__button {
+                @include leer;
+            }
+        }
+    }
+}

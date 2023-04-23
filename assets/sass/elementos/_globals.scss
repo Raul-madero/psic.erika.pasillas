@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@400;600;700&display=swap');
+
+$Fuente1: 'Montserrat', serif;
+$Fuente2: 'Dancing Script',;
+$primary-color: rgba(143,163,64,0.64);
+$brand-color: rgba(189, 186, 32,0.64);
+$secondary-color: rgba(80,116,163,0.64);
+$dark-color: rgba(74,87,25,34);
+$offwhite: rgb(247, 248, 242);
+$soft-black: rgba(26,26,2,0.64);
+
+@mixin caja {
+	color: $color-primario;
+	box-shadow: 0px 20px 33px 0px rgba(0,0,0,0.20);
+}
+
+@mixin titulos($fuente) {
+	@if $fuente ==$Fuente1 {
+		font-family: $Fuente1;
+	} @else {
+		font-family: $Fuente2;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+}
+
+@mixin leer {
+	display: block;
+	padding-top: 16px;
+	width: 160px;
+	height: 40px;
+	border: 1px solid $dark-color;
+	border-radius: 8px;
+	text-align: center;
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+	line-height: calculateRem($size)*1.5;
+}
+
+@mixin listas {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	li a {
+		text-decoration: none;
+		margin-right: 15px
+	}
+}
+
+@mixin action {
+	&:hover {
+		scale: 1.1;
+		box-shadow: 0 4px 4px 2px $dark-color;
+	}
+}
+
+
+// Funciones
+@function get-opacity($color, $amount) {
+  @return rgba($color, $amount);
+}
+
+@function calculateRem($size) {
+	$remsize: calc($size / 16px);
+	@return $remsize * 1rem;
+}
+
+@each $header, $size in (h1: 30px, h2: 25px, h3: 20px) {
+  #{$header} {
+		font-size: $size;
+		@include titulos($Fuente1);
+		margin: 0;
+  }
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	font-family: $Fuente1;
+}
+
+a {
+	text-decoration: none;
+	display: inline;
+	color: black;
+}
