@@ -23,21 +23,35 @@
     }
 }
     .header-nav {
-        position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr;
         height: 150px;
         &__logo {
-            position: absolute;
             margin-left: 50px;
             margin-bottom: 50px;
             img {
-                width: 220px;
-                height: 150px;
+                width: 200px;
+                height: 130px;
+                margin-bottom: 24px;
                 @include action;
             }
         }
         &__about {
+            display: none;
+            align-items: center;
+            justify-content: flex-end;
+            margin-right: 50px;
+            a {
+                font-family: $Fuente2;
+                border-bottom: 1px solid black;
+                @include action;
+                @include font-size(25px);
+            }
+        }
+    }
+
+    @include media (tablet) {
+        .header-nav__about {
             display: flex;
             align-items: center;
             justify-content: flex-end;

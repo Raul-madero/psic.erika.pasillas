@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@400;600;700&display=swap");
+/* Media Queries Mixin
+**********************/
 h1 {
   font-size: 30px;
   font-family: "Montserrat", serif;
@@ -63,26 +65,25 @@ a {
 }
 
 .header-nav {
-  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 150px;
 }
 .header-nav__logo {
-  position: absolute;
   margin-left: 50px;
   margin-bottom: 50px;
 }
 .header-nav__logo img {
-  width: 220px;
-  height: 150px;
+  width: 200px;
+  height: 130px;
+  margin-bottom: 24px;
 }
 .header-nav__logo img:hover {
   scale: 1.1;
   box-shadow: 0 4px 4px 2px rgb(74, 87, 25);
 }
 .header-nav__about {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: flex-end;
   margin-right: 50px;
@@ -99,6 +100,25 @@ a {
   box-shadow: 0 4px 4px 2px rgb(74, 87, 25);
 }
 
+@media only screen and (min-width: 768px) {
+  .header-nav__about {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 50px;
+  }
+  .header-nav__about a {
+    font-family: "Dancing Script";
+    border-bottom: 1px solid black;
+    font-size: 25px;
+    font-size: 1.5625rem;
+    line-height: 2.34375rem;
+  }
+  .header-nav__about a:hover {
+    scale: 1.1;
+    box-shadow: 0 4px 4px 2px rgb(74, 87, 25);
+  }
+}
 .hero-body {
   position: fixed;
 }
@@ -106,11 +126,11 @@ a {
 .home-main {
   display: flex;
   flex-direction: column;
-  place-items: center;
-  align-content: center;
-  justify-content: center;
+  align-items: center;
+  justify-items: flex-start;
   width: 100%;
   height: 100vh;
+  padding-top: 150px;
   background-image: url(../assets/img/marDesktop.jpg);
   background-position: center;
   background-size: cover;
@@ -118,9 +138,8 @@ a {
 }
 .home-main__title {
   width: 50%;
-  padding-top: 15px;
   text-align: center;
-  margin-bottom: 150px;
+  margin-bottom: 24px;
   font-weight: 700;
   color: rgb(247, 248, 242);
 }
@@ -143,6 +162,16 @@ a {
   line-height: 1.5rem;
 }
 
+@media only screen and (min-width: 768px) {
+  .home-main {
+    place-content: center;
+    padding-top: 0;
+  }
+  .home-main__title {
+    padding-top: 15px;
+    margin-bottom: 150px;
+  }
+}
 .main-article {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -374,6 +403,86 @@ a {
   grid-column: 4/5;
   grid-row: 2/3;
   color: rgba(74, 87, 25, 0.6);
+}
+
+.personal-info {
+  display: grid;
+  grid-template-columns: 500px 700px;
+  grid-template-rows: 25px auto;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  width: 100%;
+  height: 350px;
+  padding: 24px 50px;
+  background-color: rgba(80, 116, 163, 0.64);
+}
+.personal-info--image {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  width: 100%;
+}
+.personal-info--title {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  align-self: end;
+  padding-top: 50px;
+  letter-spacing: 1.8px;
+  font-weight: 700;
+  color: rgb(74, 87, 25);
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+.personal-info--about {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  font-weight: 500;
+  padding-top: 80px;
+  color: rgba(74, 87, 25, 0.8);
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+}
+
+.proyect-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 20px auto-fit;
+  row-gap: 48px;
+  place-items: center;
+  width: 80%;
+  margin: 50px auto;
+}
+.proyect-container--title {
+  grid-column: 1/4;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 24px;
+  color: rgba(26, 26, 2, 0.64);
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  border-bottom: 1px solid rgba(74, 87, 25, 0.5);
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+.proyect-container--card {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 18px;
+  border: 1px solid rgba(143, 163, 64, 0.75);
+}
+.proyect-container--card .card--title {
+  font-family: "Dancing Script";
+  font-weight: 400;
+  margin-bottom: 24px;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
 }
 
 .footer-info {
