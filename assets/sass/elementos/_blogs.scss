@@ -52,7 +52,7 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    width: 75%;
+    width: 70%;
     margin: 10px auto;
     &--title {
         display: block;
@@ -110,9 +110,11 @@
             }
         }
     }
+    .blogs-container {
+        .cards-container {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+    }
 }
 
-.cards-container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}

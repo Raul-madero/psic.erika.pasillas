@@ -1,21 +1,13 @@
 .personal-info {
-    display: grid;
-    grid-template-columns: 500px 700px;
-    grid-template-rows: 25px auto;
-    column-gap: 50px;
     width: 100%;
-    height: 350px;
-    padding: 24px 50px;
+    height: fit-content;
+    padding: 24px 10px;
     background-color: $secondary-color;
     &--image {
-        grid-column: 1/2;
-        grid-row: 1/3;
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
     }
     &--title {
-        grid-column: 2/3;
-        grid-row: 1/2;
-        align-self: end;
         padding-top: 50px;
         letter-spacing: 1.8px;
         font-weight: 700;
@@ -23,8 +15,6 @@
         @include font-size(20px);
     }
     &--about {
-        grid-column: 2/3;
-        grid-row: 2/3;
         font-weight: 500;
         padding-top: 80px;
         color: get-opacity($dark-color, 0.8);
@@ -33,15 +23,10 @@
 }
 
 .proyect-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 20px auto-fit;
-    row-gap: 48px;
     place-items: center;
     width: 80%;
     margin: 50px auto;
     &--title {
-        grid-column: 1/4;
         width: 100%;
         text-align: center;
         padding-bottom: 24px;
@@ -64,6 +49,39 @@
             margin-bottom: 24px;
             color: get-opacity(black, 0.8);
             @include font-size(18px)
+        }
+    }
+}
+
+@include media (tablet) {
+    .proyect-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 20px auto-fit;
+        row-gap: 48px;
+        place-items: center;
+        width: 80%;
+        margin: 50px auto;
+        &--title {
+            grid-column: 1/4;
+        }
+    }
+}
+
+@include media (desktop-s) {
+    .personal-info {
+        display: grid;
+        grid-template-columns: 500px 700px;
+        grid-template-rows: 25px auto;
+        column-gap: 50px;
+        &--image {
+            grid-column: 1/2;
+            grid-row: 1/3;
+        }
+        &--title {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            align-self: end;
         }
     }
 }

@@ -10,20 +10,20 @@
     .footer-name {
         color: $offwhite;
         font-family: $Fuente2;
-        @include font-size(36px);
+        @include font-size(20px);
     }
     .footer-lic {
         color: $offwhite;
         font-family: $Fuente2;
-        @include font-size(24px);
+        @include font-size(18px);
     }
 }
 
 @include media (tablet) {
-    .footer-name {
-        @include font-size(20px);
+    .footer-info .footer-name {
+        @include font-size(36px)
     }
-    .footer-lic {
-        @include font-size(18px);
+    .footer-info .footer-lic {
+        @include font-size(24px);
     }
 }
