@@ -173,8 +173,8 @@ a {
   }
 }
 .main-article {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   place-content: center;
   width: 100%;
   padding: 40px 0;
@@ -188,7 +188,7 @@ a {
   place-self: end;
   width: 90%;
   height: 100%;
-  border-right: 0.5px solid rgba(26, 26, 2, 0.64);
+  border-bottom: 0.5px solid rgba(26, 26, 2, 0.64);
 }
 .main-article--image__title {
   margin-bottom: 8px;
@@ -203,7 +203,7 @@ a {
   height: 70%;
   border-radius: 16px;
   margin-bottom: 24px;
-  margin-top: 24px;
+  margin-top: 16px;
 }
 .main-article--info {
   place-self: center;
@@ -252,8 +252,8 @@ a {
 }
 .blogs-container .cards-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 48px;
+  grid-template-columns: 1fr;
+  gap: 10px;
   border-top: 1px solid rgba(26, 26, 2, 0.64);
 }
 .blogs-container .cards-container .blog-card {
@@ -298,6 +298,25 @@ a {
   border: 1px solid rgb(74, 87, 25);
   border-radius: 8px;
   text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+  }
+  .main-article--image {
+    border-bottom: none;
+    border-right: 0.5px solid rgba(26, 26, 2, 0.64);
+  }
+  .main-article--image__image {
+    margin-top: 24px;
+  }
+}
+.cards-container {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .news {
@@ -508,4 +527,17 @@ a {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 2.25rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-name {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+  .footer-lic {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
 }

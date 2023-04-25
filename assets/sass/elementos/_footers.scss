@@ -18,3 +18,12 @@
         @include font-size(24px);
     }
 }
+
+@include media (tablet) {
+    .footer-name {
+        @include font-size(20px);
+    }
+    .footer-lic {
+        @include font-size(18px);
+    }
+}

@@ -1,6 +1,6 @@
 .main-article {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     place-content: center;
     width: 100%;
     padding: 40px 0;
@@ -12,7 +12,7 @@
         place-self: end;
         width: 90%;
         height: 100%;
-        border-right: .5px solid $soft-black;
+        border-bottom: .5px solid $soft-black;
         &__title {
             margin-bottom: 8px;
             font-weight: 700;
@@ -24,7 +24,7 @@
             height: 70%;
             border-radius: 16px;
             margin-bottom: 24px;
-            margin-top: 24px;
+            margin-top: 16px;
         }
     }
     &--info {
@@ -61,8 +61,8 @@
     }
     .cards-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 48px;
+        grid-template-columns: 1fr;
+        gap: 10px;
         border-top: 1px solid $soft-black;
         .blog-card {
             display: flex;
@@ -95,4 +95,24 @@
             }
         }
     }
+}
+
+@include media (tablet) {
+    .main-article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-content: center;
+        &--image {
+            border-bottom: none;
+            border-right: .5px solid $soft-black;
+            &__image {
+                margin-top: 24px;
+            }
+        }
+    }
+}
+
+.cards-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
