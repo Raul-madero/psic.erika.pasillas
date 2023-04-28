@@ -40,11 +40,11 @@ a {
 
 .main-header {
   width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 200px;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 1fr 2fr;
+  padding-top: 20px;
   background-image: linear-gradient(8deg, rgb(247, 248, 242), rgba(143, 163, 64, 0.64));
 }
 .main-header .social-media {
@@ -66,17 +66,18 @@ a {
 }
 
 .header-nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
 }
 .header-nav__logo {
   margin-left: 50px;
-  margin-bottom: 50px;
 }
 .header-nav__logo img {
-  width: 200px;
-  height: 130px;
+  width: 150px;
+  height: 90px;
   margin-bottom: 24px;
 }
 .header-nav__logo img:hover {
@@ -84,10 +85,7 @@ a {
   box-shadow: 0 4px 4px 2px rgb(74, 87, 25);
 }
 .header-nav__about {
-  display: none;
-  align-items: center;
-  justify-content: flex-end;
-  margin-right: 50px;
+  margin-right: 24px;
 }
 .header-nav__about a {
   font-family: "Dancing Script";
