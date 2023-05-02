@@ -52,7 +52,8 @@ $soft-black: rgba(26,26,2,0.64);
 
 @mixin action {
 	&:hover {
-		scale: 1.1;
+		transition: transform 600ms;
+		transform: scale(1.2);
 		box-shadow: 0 4px 4px 2px $dark-color;
 	}
 }

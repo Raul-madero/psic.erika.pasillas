@@ -27,6 +27,7 @@
         background-color: get-opacity($brand-color, 1);
         border: none;
         border-radius: 25px;
+        transition: transform 800ms;
         @include action;
         a {
         font-weight: 600;

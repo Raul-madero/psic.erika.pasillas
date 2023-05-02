@@ -79,9 +79,11 @@ a {
   width: 150px;
   height: 90px;
   margin-bottom: 24px;
+  transition: transform 800ms;
 }
 .header-nav__logo img:hover {
-  scale: 1.1;
+  transition: transform 600ms;
+  transform: scale(1.2);
   box-shadow: 0 4px 4px 2px rgb(74, 87, 25);
 }
 .header-nav__about {
@@ -90,12 +92,14 @@ a {
 .header-nav__about a {
   font-family: "Dancing Script";
   border-bottom: 1px solid black;
+  transition: transform 800ms;
   font-size: 25px;
   font-size: 1.5625rem;
   line-height: 2.34375rem;
 }
 .header-nav__about a:hover {
-  scale: 1.1;
+  transition: transform 600ms;
+  transform: scale(1.2);
   box-shadow: 0 4px 4px 2px rgb(74, 87, 25);
 }
 
@@ -114,7 +118,8 @@ a {
     line-height: 2.34375rem;
   }
   .header-nav__about a:hover {
-    scale: 1.1;
+    transition: transform 600ms;
+    transform: scale(1.2);
     box-shadow: 0 4px 4px 2px rgb(74, 87, 25);
   }
 }
@@ -148,9 +153,11 @@ a {
   background-color: #bdba20;
   border: none;
   border-radius: 25px;
+  transition: transform 800ms;
 }
 .home-main__button:hover {
-  scale: 1.1;
+  transition: transform 600ms;
+  transform: scale(1.2);
   box-shadow: 0 4px 4px 2px rgb(74, 87, 25);
 }
 .home-main__button a {
@@ -220,6 +227,7 @@ a {
   line-height: 1.5rem;
 }
 .main-article--info__button {
+  transition: transform 800ms;
   display: block;
   padding-top: 16px;
   width: 160px;
@@ -232,7 +240,8 @@ a {
   line-height: 1.6875rem;
 }
 .main-article--info__button:hover {
-  scale: 1.1;
+  transition: transform 600ms;
+  transform: scale(1.2);
   box-shadow: 0 4px 4px 2px rgb(74, 87, 25);
 }
 
@@ -261,9 +270,11 @@ a {
   justify-content: center;
   margin-top: 16px;
   padding: 15px;
+  transition: transform 800ms;
 }
 .blogs-container .cards-container .blog-card:hover {
-  scale: 1.1;
+  transition: transform 600ms;
+  transform: scale(1.2);
   box-shadow: 0 4px 4px 2px rgb(74, 87, 25);
 }
 .blogs-container .cards-container .blog-card__image {

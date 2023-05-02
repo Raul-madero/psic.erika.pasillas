@@ -37,6 +37,7 @@
                 width: 150px;
                 height: 90px;
                 margin-bottom: 24px;
+                transition: transform 800ms;
                 @include action;
             }
         }
@@ -45,6 +46,7 @@
             a {
                 font-family: $Fuente2;
                 border-bottom: 1px solid black;
+                transition: transform 800ms;
                 @include action;
                 @include font-size(25px);
             }

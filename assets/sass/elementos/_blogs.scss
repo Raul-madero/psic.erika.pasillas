@@ -40,6 +40,7 @@
             @include font-size(16px);
         }
         &__button {
+            transition: transform 800ms;
             @include leer;
             @include action;
             @include font-size(18px);
@@ -70,6 +71,7 @@
             justify-content: center;
             margin-top: 16px;
             padding: 15px;
+            transition: transform 800ms;
             @include action;
             &__image {
                 width: 90%;
